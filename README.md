@@ -10,7 +10,18 @@
 <img width="1918" height="457" alt="image" src="https://github.com/user-attachments/assets/bdc12d37-d7b6-4faa-810b-dc074a8a0a81" />
 <img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/03061ee7-8865-497d-b417-737b337b293a" />
 <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/049e5800-3b2f-4131-b9c3-a4e9c3297bb2" />
-  
+非稳态工作模式：非稳态（Astable，也叫自激多谐振荡器）是 555 定时器的经典工作模式之一，电路无需外部触发信号，自动、持续地在两个稳定状态（高电平和低电平）之间来回切换，输出连续的方波 / 脉冲信号，因此也叫 “无稳态” 模式（没有固定的稳定状态，只有两个暂稳态）。单稳态模式需要外部触发信号才能产生单次脉冲，双稳态模式需要外部信号翻转状态，只有非稳态模式可以独立、持续地生成时钟 / 脉冲信号，是 “自激振荡” 的核心应用。电路结构极简：仅需 2 个电阻 + 1 个电容 + 555 芯片，就能实现稳定的脉冲发生，成本极低、可靠性高。选择它的核心原因，结构极简、成本极低、无需外部触发、频率 / 占空比灵活可调，是生成连续脉冲信号的最优方案之一，广泛应用于时钟、PWM、LED 驱动等场景。
+<img width="1281" height="497" alt="image" src="https://github.com/user-attachments/assets/a4f63557-c4fa-4ef5-bd80-edac1b8242e7" />
+只需要RA、RB（在放电端和阈值端之间），然后阈值会反馈到触发端，这样就实现了自触发。
+建模方程：给电阻和电容选定一些值
+<img width="1245" height="595" alt="image" src="https://github.com/user-attachments/assets/124ea814-c195-4c23-958d-03f77f96a31e" />
+100K POT电位器：电位器的匝数很重要，会影响精度，一匝对100K来说精度不高，这意味着从0度到360度，每一度是100K除以360，圈数越多价格越贵，如果用电位器的两端，那就是电位器的阻值也就是100K欧姆。我们需要把它接到滑动触点上，这样才能调节它
+<img width="1918" height="782" alt="image" src="https://github.com/user-attachments/assets/92ad422d-2a5b-49de-9373-64f82ef26399" />
+<img width="1918" height="642" alt="image" src="https://github.com/user-attachments/assets/45bddb52-a568-4935-bf64-e3e97e2b0f26" />
+
+
+
+
 
 
 
