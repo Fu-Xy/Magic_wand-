@@ -20,8 +20,9 @@
 <img width="1918" height="642" alt="image" src="https://github.com/user-attachments/assets/45bddb52-a568-4935-bf64-e3e97e2b0f26" />
 计时器的输出要做的就是给计数器提供时钟信号，会让计数器开始计数，如果是4位计数器就会计到15然后再循环,为什么用CMOS逻辑而不是纯粹的TTL逻辑？因为我需要那种电压容差，我希望它能支持2V到10V的电压范围，而TTL电压通常在5V左右的范围。SN74HC393N的工作电压范围是2到6伏，这意味着，我们的电源有3节电池供电，初始4.5伏，即使电压不断下降，芯片也能持续工作。选用高位的输出，因为它会计数得慢一些
 <img width="1913" height="900" alt="image" src="https://github.com/user-attachments/assets/8c07a467-e068-475c-8a4b-be28eb195587" />
-解码器选用CD74HC138E
+解码器选用CD74HC138E，大多数芯片都是低电平有效使能的，所以你只要将它直接连接到芯片，他就能被使能。
 <img width="1912" height="900" alt="image" src="https://github.com/user-attachments/assets/d12f9a93-6163-4f62-b2fe-f6e6d36aff46" />
+用端口实现模块间接口！！！
 
 
 
